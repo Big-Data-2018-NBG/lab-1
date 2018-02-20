@@ -1,0 +1,14 @@
+
+*.xml
+
+*.iml
+
+CMakeLists\.txt
+
+cmake-build-debug/CMakeCache\.txt
+
+*.cmake
+
+*.bin
+
+cmake-build-debug/
