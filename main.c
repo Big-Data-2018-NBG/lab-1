@@ -24,7 +24,14 @@ int generateRandomNumber(int Range) {
 void procedureTwo(int *Array, int arraySize) {
 
     int temp = (arraySize * 0.1);
-    int increment = arraySize / temp;
+    int increment =0;
+    if(temp > 0) {
+         increment = arraySize / temp;
+    }else {
+
+        increment = 1;
+    }
+
     omp_set_num_threads(4);
 
     //Way to do it with the compiler making choices
@@ -210,7 +217,7 @@ int main(void) {
         totalSize = totalSize * dimensionElementArray[i];
     }
 
-    printf("\n%d\n", totalSize);
+    printf("\nThe total size of the 1D array is: %d\n", totalSize);
 
     int *mainArray;
 
