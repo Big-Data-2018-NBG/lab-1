@@ -12,3 +12,7 @@ cmake-build-debug/CMakeCache\.txt
 *.bin
 
 cmake-build-debug/
+
+\.idea/
+
+*.out

@@ -14,7 +14,6 @@ int *getCoord(int dimension, const int * dimensionArray, int offset) {
 
     for (int i = dimension-1; i >= 0 ; i--){
         coord[i] = temp%dimensionArray[i];
-
         temp =  temp/dimensionArray[i];
     }
 
