@@ -97,7 +97,7 @@ int *getCoord(int dimension, const int *dimensionArray, int offset) {
 void procedureThree(int *Array, int ArraySize, const int *dimensionArray, int Dimension) {
 
     int noOfSamples = ArraySize * 0.05;
-
+int noOfThreadSamples = noOfSamples/4;
     omp_set_num_threads(4);
 
 
@@ -115,7 +115,8 @@ void procedureThree(int *Array, int ArraySize, const int *dimensionArray, int Di
     }
 
 
-    /*
+   /*
+    int sectionAmount = ArraySize / 4;
 #pragma omp parallel
     {
 #pragma omp sections
@@ -123,7 +124,7 @@ void procedureThree(int *Array, int ArraySize, const int *dimensionArray, int Di
 #pragma omp section
             {
                 int *tempArray;
-                for (int i = 0; i < sectionAmount; ++i) {
+                for (int i = 0; i < noOfThreadSamples; ++i) {
                     int k = generateRandomNumber(ArraySize);
                     printf("\nValue %d in array: %d at co-ordinates: ", k, Array[k]);
                     tempArray = getCoord(Dimension, dimensionArray, k);
@@ -136,7 +137,7 @@ void procedureThree(int *Array, int ArraySize, const int *dimensionArray, int Di
 #pragma omp section
             {
                 int *tempArray;
-                for (int i = sectionAmount; i < sectionAmount*2; ++i) {
+                for (int i = noOfThreadSamples; i < noOfThreadSamples*2; ++i) {
                     int k = generateRandomNumber(ArraySize);
                     printf("\nValue %d in array: %d at co-ordinates: ", k, Array[k]);
                     tempArray = getCoord(Dimension, dimensionArray, k);
@@ -149,7 +150,7 @@ void procedureThree(int *Array, int ArraySize, const int *dimensionArray, int Di
 #pragma omp section
             {
                 int *tempArray;
-                for (int i = 2*sectionAmount; i < 3*sectionAmount; ++i) {
+                for (int i = 2*noOfThreadSamples; i < 3*noOfThreadSamples; ++i) {
                     int k = generateRandomNumber(ArraySize);
                     printf("\nValue %d in array: %d at co-ordinates: ", k, Array[k]);
                     tempArray = getCoord(Dimension, dimensionArray, k);
@@ -162,7 +163,7 @@ void procedureThree(int *Array, int ArraySize, const int *dimensionArray, int Di
 #pragma omp section
             {
                 int *tempArray;
-                for (int i = 3*sectionAmount; i < 4*sectionAmount; ++i) {
+                for (int i = 3*noOfThreadSamples; i < 4*noOfThreadSamples; ++i) {
                     int k = generateRandomNumber(ArraySize);
                     printf("\nValue %d in array: %d at co-ordinates: ", k, Array[k]);
                     tempArray = getCoord(Dimension, dimensionArray, k);
@@ -175,8 +176,8 @@ void procedureThree(int *Array, int ArraySize, const int *dimensionArray, int Di
         }
 
     }
-*/
 
+*/
 
 
 }
