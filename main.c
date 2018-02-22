@@ -249,6 +249,7 @@ int main(void) {
     printf("\nTime taken for all three procedures to complete tasks: %lf\n", finalTime);
     printf("\nTotal elements made equal to 1: %d\n", count);
 
+free(mainArray);
 
 }
 

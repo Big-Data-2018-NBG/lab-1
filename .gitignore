@@ -18,3 +18,5 @@ cmake-build-debug/
 *.out
 
 \.dropbox
+
+*.ini
