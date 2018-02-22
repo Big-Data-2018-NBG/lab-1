@@ -1,0 +1,72 @@
+Procedure one Pseudo code:
+
+/*
+routine: populateArrayWithZeroes
+argument(s): Array: pointer to 1D array that maps the elements contained in the K-dimensional integer array,
+           : oneDimArraySize: integer value of the number of elements contained in the 1D array, which maps the elements contained in the K-dimensional integer array, 'Array'.
+returns: nothing
+begin
+    for each indice from 0 until 1 less than 'Array' size
+        set corresponding indices of 'Array' with value 0
+end
+*/
+
+Procedure Two Pseudo code:
+/*
+routine: uniformPopulationOfOnes
+argument(s): Array: pointer to 1D array that maps the elements contained in the K-dimensional integer array,
+           : oneDimArraySize: integer value of the number of elements contained in the 1D array, which maps the elements contained in the K-dimensional integer array, 'Array'.
+returns: nothing
+begin
+    initialise a dummy integer variable 'temp' with value that is 10 percent of the number of elements in the 1D array, which maps the elements contained in the K-dimensional integer array.
+    initialise an integer 'increment' to be the increment value for traversal of the 1D array, 'Array'.
+    if dummy variable greater than 0 then set increment value to the quotient of 'oneDimArraySize' and temporary variable value
+        else set the increment value to 1
+    for indices 0 until 1 less than 'oneDimArraySize' with increments of increment value size previously determined
+        set corresponding indices of 'Array' with value 1
+end
+*/
+
+Procedure Three
+/*
+routine: printUniformRandomCoordinates
+argument(s): Array: pointer to 1D array that maps the elements contained in the K-dimensional integer array.
+           : oneDimArraySize: integer value of the number of elements contained in the 1D array, which maps the elements contained in the K-dimensional integer array, 'Array'.
+           : arrayOfBoundDimensions: 1D array of bounding values in each of the K-Dimensions
+           : kDimension: number of dimensions for the K-dimensional array
+returns: nothing
+begin
+    initialise integer variable 'noOfCoordinates' to value of 5 percent of the number of elements in 1D array, Array.
+    initialise an integer pointer 'tempArray' to a dummy integer array
+    for each indice from 0 until 1 less than 'noOfCoordinates' size
+        initialise integer variable 'randomNumber' to a random integer using 'generateRandomNumber' function
+
+end
+*/
+
+
+Co-ordinate function psuedo code:
+
+/*
+routine: getCoordinate
+argument(s): kDimension: number of dimensions for the K-dimensional array,
+           : arrayOfBoundDimensions: 1D array of bounding values in each of the K-Dimensions,
+           : offset:
+returns: integer: (coordinate).
+begin
+
+end
+*/
+
+
+
+Random Number generator Psuedo code:
+/*
+routine: generateRandomNumber
+argument(s): oneDimArraySize: integer value of the number of elements contained in the 1D array, which maps the elements contained in the K-dimensional integer array.
+returns: integer: (randomNumber).
+begin
+    generate random number between 0 and 1 less than the number of elements in the 1D array.
+end
+*/
+
