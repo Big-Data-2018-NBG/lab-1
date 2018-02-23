@@ -53,7 +53,10 @@ argument(s): kDimension: number of dimensions for the K-dimensional array,
            : arrayOfBoundDimensions: 1D array of bounding values in each of the K-Dimensions,
            : offset:
 returns: integer: (coordinate).
-begin
+begin: perform modulus operation on offset
+     : carry over value from previous step
+	 : perform division with dimension elements value
+	 : repeat process by carrying over last used value.
 
 end
 */
